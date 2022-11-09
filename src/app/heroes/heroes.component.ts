@@ -12,6 +12,9 @@ export class HeroesComponent implements OnInit {
 
   heroes = HEROES;
 
+  // is going to be the type Hero and can be unassigned.
+  selectedHero?: Hero;
+
   constructor() { }
 
   ngOnInit(): void {
@@ -20,7 +23,7 @@ export class HeroesComponent implements OnInit {
   // Will passing in a 'hero' of type 'Hero'( which was defined in the interface file hero.ts)
   // and is  going to return nothing that is void.
   onSelected(hero: Hero): void{
-    console.log(hero);
+    this.selectedHero = hero;
   }
 
 }
