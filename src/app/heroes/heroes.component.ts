@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Hero } from '../hero';
+import { HEROES } from '../mock-heros';
 
 @Component({
   selector: 'app-heroes',
@@ -8,17 +9,18 @@ import { Hero } from '../hero';
 })
 export class HeroesComponent implements OnInit {
 
-  value = 1.23;
 
-  hero: Hero =    {
-    id: 1,
-    name: 'Big boy'
-  }
-
+  heroes = HEROES;
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  // Will passing in a 'hero' of type 'Hero'( which was defined in the interface file hero.ts)
+  // and is  going to return nothing that is void.
+  onSelected(hero: Hero): void{
+    console.log(hero);
   }
 
 }
