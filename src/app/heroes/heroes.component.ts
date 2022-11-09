@@ -24,6 +24,7 @@ export class HeroesComponent implements OnInit {
   // and is  going to return nothing that is void.
   onSelected(hero: Hero): void{
     this.selectedHero = hero;
+    console.log(hero);
   }
 
 }
